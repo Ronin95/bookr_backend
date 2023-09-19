@@ -1,4 +1,12 @@
 activate environment
 bookr_env\Scripts\activate
 
+SuperUser:
+n.badjevic@gmail.com
+19Nikola95
+at86$%EB
 
+Normal User
+badja-1995@hotmail.com
+badja
+123456
