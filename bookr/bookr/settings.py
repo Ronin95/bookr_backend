@@ -49,6 +49,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'bookr.urls'
 
+SESSION_ENGINE = "django.contrib.sessions.backends.db"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -78,6 +80,9 @@ DATABASES = {
     }
 }
 
+SESSION_COOKIE_HTTPONLY = True  # Default is True; prevents JavaScript access.
+SESSION_COOKIE_SECURE = True    # Use this in production to ensure the cookie is only sent over HTTPS.
+SESSION_COOKIE_AGE = 1209600    # Two weeks, in seconds.
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
