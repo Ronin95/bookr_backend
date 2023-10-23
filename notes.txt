@@ -10,3 +10,5 @@ Normal User
 badja-1995@hotmail.com
 badja
 123456
+
+python manage.py startapp nameOfApp
