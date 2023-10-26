@@ -15,6 +15,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
+ADOBE_CLIENT_ID = os.environ.get('ADOBE_CLIENT_ID') # api
+ADOBE_ACCESS_TOKEN = os.environ.get('ADOBE_ACCESS_TOKEN')
+ADOBE_CLIENT_SECRET = os.environ.get('ADOBE_CLIENT_SECRET')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
