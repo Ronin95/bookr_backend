@@ -9,6 +9,14 @@ from .models import PDFFile
 from .serializers import PDFFileSerializer
 from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
+from django.views import View
+from django.http import FileResponse
+
+class PDFFileDetailView(View):
+    def get(self, request, filename):
+        pdf_file = get_object_or_404(PDFFile, file__icontains=filename)
+        file_path = os.path.join(settings.MEDIA_ROOT, str(pdf_file.file))
+        return FileResponse(open(file_path, 'rb'), content_type='application/pdf')
 
 class PDFFileView(APIView):
     parser_classes = (MultiPartParser, FormParser)
