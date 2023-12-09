@@ -12,3 +12,7 @@ badja
 123456
 
 python manage.py startapp nameOfApp
+
+python manage.py shell
+from pdfChat.models import TextData
+TextData.objects.all().delete() # delete all objects from rest api

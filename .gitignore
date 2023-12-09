@@ -2,3 +2,4 @@ bookr_env/
 .env
 db.sqlite3
 /bookr/media/uploadedPDFs/
+/bookr/media/splitUpPDFs/
