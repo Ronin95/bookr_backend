@@ -14,7 +14,10 @@ from django.views import View
 from django.http import FileResponse
 from .utils import split_pdf
 from django.http import HttpResponse
+from django.views.decorators.clickjacking import xframe_options_exempt
+from django.utils.decorators import method_decorator
 
+@method_decorator(xframe_options_exempt, name='dispatch')
 class PDFFileDetailView(View):
     def get(self, request, filename):
         pdf_file = get_object_or_404(PDFFile, file__icontains=filename)
@@ -81,6 +84,7 @@ class SplitPDFListView(APIView):
         # Return the list of file names
         return Response(pdf_file_names)
 
+@method_decorator(xframe_options_exempt, name='dispatch')
 class SplitPDFDetailView(View):
     def get(self, request, filename):
         # Construct the full path to the requested file
