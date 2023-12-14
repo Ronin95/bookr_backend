@@ -1,6 +1,7 @@
 # pdfChat/views.py
 # Importing necessary modules
-from rest_framework import generics
+from rest_framework import generics, status
+from rest_framework.response import Response
 from .models import TextData
 from .serializers import TextDataSerializer
 from django.http import JsonResponse
@@ -39,3 +40,11 @@ class TextDataRetrieveByFilenameAPIView(generics.RetrieveAPIView):
             serializer = self.get_serializer(instance.first())
             return JsonResponse(serializer.data)
         return JsonResponse({'message': 'Not found'}, status=404)
+
+
+class TextDataUpdateAPIView(generics.UpdateAPIView):
+    queryset = TextData.objects.all()
+    serializer_class = TextDataSerializer
+
+    def patch(self, request, *args, **kwargs):
+        return super().patch(request, *args, **kwargs)
