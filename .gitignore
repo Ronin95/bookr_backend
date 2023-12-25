@@ -3,3 +3,5 @@ bookr_env/
 db.sqlite3
 /bookr/media/uploadedPDFs/
 /bookr/media/splitUpPDFs/
+bookr/pdfChat/utils.py
+/bookr/media/vectorStoreFiles/

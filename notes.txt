@@ -18,6 +18,5 @@ from pdfChat.models import TextData
 TextData.objects.all().delete() # delete all objects from rest api
 
 
-create the array at the upload of the pdf file
-- when select tag is pressed either load (get) the data
-  or post the data
+For the AI Search Engine
+https://you.com/ - should be the motivation as to how it should look like

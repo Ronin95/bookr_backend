@@ -5,4 +5,4 @@ from .models import TextData
 class TextDataSerializer(serializers.ModelSerializer):
     class Meta:
         model = TextData
-        fields = ['id', 'filename', 'user_messages', 'ai_messages']
+        fields = ['id', 'filename', 'user_messages', 'ai_messages', 'text_chunks', 'chat_history']

@@ -32,4 +32,3 @@ def split_pdf(file_path): # split pdf after upload
         with open(output_path, 'wb') as output_pdf_file:
             pdf_writer.write(output_pdf_file)
 
-
