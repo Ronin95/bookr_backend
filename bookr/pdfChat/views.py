@@ -1,5 +1,4 @@
 # pdfChat/views.py
-# Importing necessary modules
 import json
 from rest_framework import generics, status
 from rest_framework.response import Response

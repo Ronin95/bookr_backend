@@ -6,17 +6,27 @@ n.badjevic@gmail.com
 19Nikola95
 at86$%EB
 
-Normal User
-badja-1995@hotmail.com
-badja
-123456
-
 python manage.py startapp nameOfApp
 
 python manage.py shell
 from pdfChat.models import TextData
 TextData.objects.all().delete() # delete all objects from rest api
 
+External APIs used
+https://serpapi.com/manage-api-key
+https://platform.openai.com/usage
+huggingface.co
+
 
 For the AI Search Engine
 https://you.com/ - should be the motivation as to how it should look like
+https://www.perplexity.ai/
+
+AI Agent
+https://github.com/langchain-ai/langchain/blob/master/cookbook/baby_agi_with_agent.ipynb
+
+Ideas for AI Web Search:
+https://github.com/langchain-ai/web-explorer/tree/main
+https://github.com/leptonai/search_with_lepton/tree/main
+https://python.langchain.com/docs/integrations/tools
+

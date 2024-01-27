@@ -25,4 +25,6 @@ urlpatterns = [
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('pdfUpload/', include('pdfUpload.urls')),
     path('pdfChat/', include('pdfChat.urls')),
+    path('agent/', include('agent.urls')),
+    path('kanban/', include('kanban.urls'))
 ]

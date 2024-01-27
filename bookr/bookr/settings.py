@@ -14,8 +14,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
-ADOBE_CLIENT_ID = os.environ.get('ADOBE_CLIENT_ID') # api key
+SECRET_KEY = os.environ.get('SECRET_KEY') # django secret key
+OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY') # openai api key
+HUGGINGFACEHUB_API_TOKEN = os.environ.get('HUGGINGFACEHUB_API_TOKEN') # hf api key
+SERPAPI_API_KEY = os.environ.get('SERPAPI_API_KEY') # search api key for the agent
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')
@@ -38,7 +40,10 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'corsheaders',
     'pdfUpload',
-    'pdfChat'
+    'pdfChat',
+    'agent',
+    'kanban',
+    'websearch'
 ]
 
 MIDDLEWARE = [
@@ -156,6 +161,6 @@ SIMPLE_JWT = {
     'AUTH_TOKEN_CLASSES': ('rest_framework_simplejwt.tokens.AccessToken',),
     'TOKEN_TYPE_CLAIM': 'token_type',
     'SLIDING_TOKEN_REFRESH_EXP_CLAIM': 'refresh_exp',
-    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=120),
+    'SLIDING_TOKEN_LIFETIME': timedelta(minutes=320),
     'SLIDING_TOKEN_REFRESH_LIFETIME': timedelta(days=1),
 }
