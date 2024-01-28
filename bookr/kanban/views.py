@@ -16,7 +16,7 @@ class TaskDetailView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = TaskSerializer
 
 
-@csrf_exempt  # handle CSRF differently in production
+@csrf_exempt
 def update_task_status(request, task_id):
     try:
         task = Task.objects.get(id=task_id)

@@ -18,6 +18,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY') # django secret key
 OPENAI_API_KEY = os.environ.get('OPENAI_API_KEY') # openai api key
 HUGGINGFACEHUB_API_TOKEN = os.environ.get('HUGGINGFACEHUB_API_TOKEN') # hf api key
 SERPAPI_API_KEY = os.environ.get('SERPAPI_API_KEY') # search api key for the agent
+EXA_API_KEY = os.environ.get('EXA_API_KEY') # llm based search for aiwebsearch
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG')

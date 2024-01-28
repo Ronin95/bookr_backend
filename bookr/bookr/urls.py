@@ -26,5 +26,6 @@ urlpatterns = [
     path('pdfUpload/', include('pdfUpload.urls')),
     path('pdfChat/', include('pdfChat.urls')),
     path('agent/', include('agent.urls')),
-    path('kanban/', include('kanban.urls'))
+    path('kanban/', include('kanban.urls')),
+    path('websearch/', include('websearch.urls')),
 ]

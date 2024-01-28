@@ -30,3 +30,14 @@ https://github.com/langchain-ai/web-explorer/tree/main
 https://github.com/leptonai/search_with_lepton/tree/main
 https://python.langchain.com/docs/integrations/tools
 
+https://python.langchain.com/docs/integrations/tools/wikipedia
+https://python.langchain.com/docs/integrations/tools/ddg
+https://python.langchain.com/docs/integrations/tools/exa_search
+
+External APIs for the .env file:
+SECRET_KEY= # your django secret key
+DEBUG=True
+OPENAI_API_KEY=
+HUGGINGFACEHUB_API_TOKEN=
+SERPAPI_API_KEY=
+EXA_API_KEY=
