@@ -1,10 +1,9 @@
 from langchain.docstore import InMemoryDocstore
 from langchain_community.vectorstores import FAISS
 from typing import Optional
-from langchain.chains import LLMChain
 from langchain.prompts import PromptTemplate
 from langchain_experimental.autonomous_agents import BabyAGI
-from langchain_openai import OpenAI, OpenAIEmbeddings
+from langchain_openai import OpenAIEmbeddings
 from langchain.agents import AgentExecutor, Tool, ZeroShotAgent
 from langchain.chains import LLMChain
 from langchain_community.utilities import SerpAPIWrapper

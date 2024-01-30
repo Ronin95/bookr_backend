@@ -1,6 +1,4 @@
 import os
-import json
-import logging
 from django.conf import settings
 from PyPDF2 import PdfReader
 from langchain.text_splitter import CharacterTextSplitter
